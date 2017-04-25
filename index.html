@@ -120,8 +120,8 @@
                                                                   <li class="active"><a href="#intro">Inicio</a></li>
                                                                   <li><a href="#about">Grupo 1</a></li>
 																   <li><a href="#service">Servicios</a></li>
-                                                                  <li><a href="#works">Entregables</a></li>				                                                                  
-                                                                  
+                                                                  <li><a href="#works">Entregables</a></li>				  
+                                                                  <li><a href="#codigo">C&oacute;digo Fuente</a></li>                                                                                                  
                                                                   <li><a href="#conclusiones">Conclusiones</a></li>
                                                             </ul>
                                                       </div>
@@ -309,12 +309,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-12" >
 					<div class="wow bounceInUp" data-wow-delay="0.4s">
                     <div id="owl-works" class="owl-carousel">
-                        <div class="item" style="vertical-align: middle;">
-                        	<a href="">
-                        		<i class="fa fa-code fa-5x" aria-hidden="true"></i><br />
-                        		C&oacute;digo Fuente
-                        	</a>
-                        </div>
+
                         <div class="item" style="vertical-align: middle;">
                         	<a href="Manual_de_Uso.pdf" target="_blank">
                         		<i class="fa fa-file fa-5x" aria-hidden="true"></i><br />
@@ -348,6 +343,41 @@
 
 	</section>
 	<!-- /Section: works -->
+	
+	<!-- Section: Código -->
+    <section id="codigo" class="home-section color-dark text-center bg-white">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+					<div class="section-heading text-center">
+					<h2 class="h-bold">C&oacute;digo</h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12" >
+					
+					<code>val docs = sc.textFile("biblia.txt")</code><br />
+					<code>val lower=docs.map(line => line.toLowerCase)</code><br />
+					<code>val stopwords=Set("the","of","my","to","for")</code><br />
+					<code>words =lower.flatMap(line => line.split("\\s+")).filter(! stopwords.contains(_))</code><br />
+					<code>val counts=words.map(word =>(word,1))</code><br />
+					<code>val freq =counts.reduceByKey(_ + _)</code><br />
+					
+
+                </div>
+            </div>
+		</div>
+
+	</section>
+	<!-- /Section: Código -->
 
 	<!-- Section: Conclusiones -->
     <section id="conclusiones" class="home-section color-dark text-center bg-white">
