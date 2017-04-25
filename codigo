@@ -1,0 +1,8 @@
+EJEMPLO: Contar el número de palabras con más coincidencias dentro de un texto
+
+val docs = sc.textFile("biblia.txt")
+val lower=docs.map(line => line.toLowerCase)
+val stopwords=Set("the","of","my","to","for")
+words =lower.flatMap(line => line.split("\\s+")).filter(! stopwords.contains(_))
+val counts=words.map(word =>(word,1))
+val freq =counts.reduceByKey(_ + _)
