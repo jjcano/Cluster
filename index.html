@@ -323,7 +323,7 @@
                         	</a>
                         </div>
                         <div class="item" style="vertical-align: middle;">
-                        	<a href="">
+                        	<a href="img/grafico.jpg">
                         		<i class="fa fa-signal fa-5x" aria-hidden="true"></i><br />
                         		An&aacute;lisis Gr&aacute;fico de Velocidades
                         	</a>
@@ -370,7 +370,8 @@
 					<code>words =lower.flatMap(line => line.split("\\s+")).filter(! stopwords.contains(_))</code><br />
 					<code>val counts=words.map(word =>(word,1))</code><br />
 					<code>val freq =counts.reduceByKey(_ + _)</code><br />
-					
+					<code>val invFreq = freq.map(_.swap)</code>
+					<code>invFreq.top(20).foreach(println)</code>
 
                 </div>
             </div>
@@ -399,7 +400,11 @@
 			<div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12" >
 					
-					
+					<ul style="text-align:justify;">
+						<li>Apache Spark es mucho m&aacute;s r&aacute;pido que Hadoop ya que el &uacute;ltimo trabaja en disco mientras que Spark lo hace en memoria</li>
+						<li>Al usar el Apache Spark como Cl&uacute;ster permite dividir el procesamiento de los datos en las diferentes estaciones de trabajo, permitiendo procesos paralelos con mayor eficiencia. </li>
+						<li>Apache Spark tiene tres prioridades: Velocidad, Facilidad de Uso y Capacidad Avanzanda de An&aacute;lisis</ii>
+					</ul>
 
                 </div>
             </div>
